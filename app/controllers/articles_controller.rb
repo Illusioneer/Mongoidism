@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   # GET /articles.xml
   def index
     @articles = Article.all
-
+# for some reason the HP workstation won't let me use a chained display of the author
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
