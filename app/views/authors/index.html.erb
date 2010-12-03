@@ -1,0 +1,31 @@
+<h1>Listing authors</h1>
+
+<table>
+  <tr>
+    <th>Shortname</th>
+    <th>Fullname</th>
+    <th>Login</th>
+    <th>Password</th>
+    <th>Modified on</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @authors.each do |author| %>
+  <tr>
+    <td><%= author.shortname %></td>
+    <td><%= author.fullname %></td>
+    <td><%= author.login %></td>
+    <td><%= author.password %></td>
+    <td><%= author.modified_on %></td>
+    <td><%= link_to 'Show', author %></td>
+    <td><%= link_to 'Edit', edit_author_path(author) %></td>
+    <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Author', new_author_path %>
