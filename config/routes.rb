@@ -1,4 +1,6 @@
 Mongoidism::Application.routes.draw do
+  devise_for :users
+
   resources :authors
 
   resources :articles

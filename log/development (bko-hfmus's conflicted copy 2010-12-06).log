@@ -1497,434 +1497,7 @@ admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
 
 
-Started GET "/articles/index.xml" for 127.0.0.1 at 2010-12-03 14:54:00 -0500
-  Processing by ArticlesController#show as XML
-  Parameters: {"id"=>"index"}
-Completed   in 3ms
-
-BSON::InvalidObjectId (illegal ObjectId format):
-  app/controllers/articles_controller.rb:16:in `show'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.1ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (97.8ms)
-
-
-Started GET "/articles/index/1.xml" for 127.0.0.1 at 2010-12-03 14:54:52 -0500
-
-ActionController::RoutingError (No route matches "/articles/index/1.xml"):
-  
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.4ms)
-
-
-Started GET "/articles/show/1.xml" for 127.0.0.1 at 2010-12-03 14:54:58 -0500
-
-ActionController::RoutingError (No route matches "/articles/show/1.xml"):
-  
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.9ms)
-
-
-Started GET "/articles/show/1" for 127.0.0.1 at 2010-12-03 14:55:03 -0500
-
-ActionController::RoutingError (No route matches "/articles/show/1"):
-  
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (70.3ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 14:55:06 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (442.4ms)
-Completed   in 452ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__229155688_79344540__792467839'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__229155688_79344540__792467839'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.3ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 14:56:17 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (64.9ms)
-Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles/index.xml" for 127.0.0.1 at 2010-12-03 14:56:24 -0500
-  Processing by ArticlesController#show as XML
-  Parameters: {"id"=>"index"}
-Completed   in 2ms
-
-BSON::InvalidObjectId (illegal ObjectId format):
-  app/controllers/articles_controller.rb:16:in `show'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
-
-
-Started GET "/articles/4cdc108c421aa92679000002" for 127.0.0.1 at 2010-12-03 14:56:34 -0500
-  Processing by ArticlesController#show as HTML
-  Parameters: {"id"=>"4cdc108c421aa92679000002"}
-mongoidism_development['articles'].find({:_id=>BSON::ObjectId('4cdc108c421aa92679000002')}, {}).limit(-1)
-Rendered articles/show.html.erb within layouts/application (6.2ms)
-Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles/4cdc108c421aa92679000002.xml" for 127.0.0.1 at 2010-12-03 14:56:41 -0500
-  Processing by ArticlesController#show as XML
-  Parameters: {"id"=>"4cdc108c421aa92679000002"}
-mongoidism_development['articles'].find({:_id=>BSON::ObjectId('4cdc108c421aa92679000002')}, {}).limit(-1)
-Completed 200 OK in 983ms (Views: 979.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 14:57:12 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (5.6ms)
-Completed   in 21ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__229155688_78601720__792467839'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__229155688_78601720__792467839'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.7ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.0ms)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:02:55 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (225.9ms)
-Completed   in 258ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__1054374302_78798420__730942910'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__1054374302_78798420__730942910'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.0ms)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:04:46 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (87.0ms)
-Completed   in 106ms
-
-ActionView::Template::Error (undefined method `authors_id' for #<Article:0x9643b20>):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.authors_id %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__331124965_78798450_109854128'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__331124965_78798450_109854128'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.2ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:05:11 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (10.6ms)
-Completed   in 30ms
-
-ActionView::Template::Error (undefined method `authors' for #<Article:0x993eac8>):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.authors %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__331124965_80387910_109854128'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__331124965_80387910_109854128'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.9ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:05:32 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (3.8ms)
-Completed   in 17ms
-
-ActionView::Template::Error (undefined method `authors' for #<Article:0x961c32c>):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.authors.shortname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__331124965_78751740_109854128'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__331124965_78751740_109854128'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.6ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.2ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:05:38 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (6.8ms)
-Completed   in 25ms
-
-ActionView::Template::Error (undefined method `authors' for #<Article:0x987f114>):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.authors %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__331124965_79996780_109854128'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__331124965_79996780_109854128'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.8ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.6ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (44.1ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:05:44 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (149.9ms)
-Completed 200 OK in 167ms (Views: 165.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles/" for 127.0.0.1 at 2010-12-03 15:05:57 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (5.1ms)
-Completed   in 24ms
-
-ActionView::Template::Error (undefined method `shortname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.shortname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__331124965_79203840_109854128'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__331124965_79203840_109854128'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (92.8ms)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-
-
-Started GET "/rails/info/properties" for 127.0.0.1 at 2010-12-03 15:16:34 -0500
-  Processing by Rails::InfoController#properties as */*
-  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-Rendered inline template (5.6ms)
-Completed 200 OK in 718ms (Views: 8.9ms | ActiveRecord: 0.9ms)
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:47 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (210.9ms)
-Completed 200 OK in 220ms (Views: 218.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:17:21 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (120.0ms)
-Completed   in 128ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__787382451_79159920__816780828'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__787382451_79159920__816780828'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.8ms)
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:17:21 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (3.7ms)
-Completed   in 14ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__787382451_79854290__816780828'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__787382451_79854290__816780828'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.8ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.4ms)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-mongoidism_development['authors'].find({}, {}).limit(-1)
-mongoidism_development['articles'].find({}, {}).limit(-1)
-mongoidism_development['articles'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-mongoidism_development['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}, {}).limit(-1)
-mongoidism_development['articles'].find({:_id=>1}, {}).limit(-1)
-mongoidism_development['articles'].find({:_id=>BSON::ObjectId('4cdc32f4421aa92679000009')}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-mongoidism_development['authors'].find({}, {}).limit(-1)
-mongoidism_development['authors'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:33:09 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (156.8ms)
-Completed   in 178ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__531220198__614495608__467323396'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__531220198__614495608__467323396'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.7ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.6ms)
-mongoidism_development['articles'].find({}, {}).limit(-1)
-mongoidism_development['articles'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:34:32 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-Rendered articles/index.html.erb within layouts/application (4.7ms)
-Completed   in 13ms
-
-ActionView::Template::Error (undefined method `fullname' for nil:NilClass):
-    14: <% @articles.each do |article| %>
-    15:   <tr>
-    16:     <td><%= article.name %></td>
-    17:     <td><%= article.author.fullname %></td>
-    18:     <td><%= article.blog %></td>
-    19:     <td><%= article.content %></td>
-    20:     <td><%= link_to 'Show', article %></td>
-  app/views/articles/index.html.erb:17:in `block in _app_views_articles_index_html_erb__531220198_78707290__467323396'
-  app/views/articles/index.html.erb:14:in `_app_views_articles_index_html_erb__531220198_78707290__467323396'
-  app/controllers/articles_controller.rb:7:in `index'
-
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
-Rendered /home/bryano/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.7ms)
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:34:52 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (69.5ms)
-Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.0ms)
-mongoidism_development['articles'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-mongoidism_development['articles'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['articles'].find({}, {}).limit(-1)
-mongoidism_development['articles'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-mongoidism_development['articles'].find({}, {}).limit(-1).sort([[:_id, :desc]])
-mongoidism_development['authors'].find({:_id=>"bushroot"}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-
-
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:46:41 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:31 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -1932,11 +1505,23 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (879.6ms)
-Completed 200 OK in 889ms (Views: 888.7ms | ActiveRecord: 0.0ms)
+Rendered articles/index.html.erb within layouts/application (777.1ms)
+Completed 200 OK in 1012ms (Views: 1010.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:50:58 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:37 -0500
+  Processing by ArticlesController#index as HTML
+mongoidism_development['articles'].find({}, {})
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
+Rendered articles/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:39 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -1945,10 +1530,10 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
 Rendered articles/index.html.erb within layouts/application (13.2ms)
-Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:51:07 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:39 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -1956,11 +1541,11 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (13.3ms)
-Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+Rendered articles/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:51:08 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:39 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -1968,11 +1553,11 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (13.9ms)
-Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+Rendered articles/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:51:09 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:40 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -1980,11 +1565,11 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (12.5ms)
-Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+Rendered articles/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:51:10 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:40 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -1992,11 +1577,11 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (12.5ms)
-Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+Rendered articles/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:51:11 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:40 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -2004,11 +1589,11 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (15.2ms)
-Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+Rendered articles/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/articles" for 127.0.0.1 at 2010-12-06 09:51:38 -0500
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:40 -0500
   Processing by ArticlesController#index as HTML
 mongoidism_development['articles'].find({}, {})
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
@@ -2016,122 +1601,21 @@ mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
 mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (12.2ms)
+Rendered articles/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2010-12-03 15:16:40 -0500
+  Processing by ArticlesController#index as HTML
+mongoidism_development['articles'].find({}, {})
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
+mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
+Rendered articles/index.html.erb within layouts/application (11.9ms)
 Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
 admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-
-
-Started GET "/rails/info/properties" for 10.100.203.81 at 2010-12-07 10:41:47 -0500
-  Processing by Rails::InfoController#properties as */*
-  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-Rendered inline template (0.5ms)
-Completed 200 OK in 303ms (Views: 1.4ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/articles" for 10.100.203.81 at 2010-12-07 10:42:01 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (514.2ms)
-Completed 200 OK in 520ms (Views: 519.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles" for 10.100.203.81 at 2010-12-07 10:50:59 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (12.2ms)
-Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles" for 10.100.203.81 at 2010-12-07 11:33:18 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (41.8ms)
-Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
 admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-
-
-Started GET "/articles" for 10.100.203.81 at 2010-12-08 13:23:11 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (640.5ms)
-Completed 200 OK in 654ms (Views: 653.5ms | ActiveRecord: 0.0ms)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
-DEPRECATION WARNING: :name_prefix was deprecated in the new router syntax. Use :as instead. (called from block in <top (required)> at /home/bryano/Dropbox/Code/Rails/mongoidism/config/routes.rb:2)
-DEPRECATION WARNING: :name_prefix was deprecated in the new router syntax. Use :as instead. (called from block in <top (required)> at /home/bryano/Dropbox/Code/Rails/mongoidism/config/routes.rb:2)
-DEPRECATION WARNING: :name_prefix was deprecated in the new router syntax. Use :as instead. (called from block in <top (required)> at /home/bryano/Dropbox/Code/Rails/mongoidism/config/routes.rb:2)
-
-
-Started GET "/rails/info/properties" for 127.0.0.1 at 2011-01-20 19:24:20 -0500
-  Processing by Rails::InfoController#properties as */*
-  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-Rendered inline template (0.4ms)
-Completed 200 OK in 336ms (Views: 1.5ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/articles/new" for 127.0.0.1 at 2011-01-20 19:30:12 -0500
-  Processing by ArticlesController#new as HTML
-mongoidism_development['authors'].find({}, {})
-Rendered articles/_form.html.erb (997.4ms)
-Rendered articles/new.html.erb within layouts/application (1002.7ms)
-Completed 200 OK in 1034ms (Views: 1033.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/articles" for 127.0.0.1 at 2011-01-20 19:30:18 -0500
-  Processing by ArticlesController#index as HTML
-mongoidism_development['articles'].find({}, {})
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"twain"}, {}).limit(-1)
-mongoidism_development['authors'].find({:_id=>"cordy"}, {}).limit(-1)
-Rendered articles/index.html.erb within layouts/application (54.5ms)
-Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)

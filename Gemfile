@@ -8,7 +8,8 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'mongoid', '2.0.0.beta.19'  
 gem 'bson_ext' 
-#gem 'nokogiri'
+gem 'devise', '1.1.rc0'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
